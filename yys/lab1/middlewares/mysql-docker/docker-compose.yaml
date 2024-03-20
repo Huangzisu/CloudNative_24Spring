@@ -1,0 +1,23 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:8.0.34
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 4iKqWz0dasVpC0z4EQUK
+    volumes:
+      - main-mysql-data:/var/lib/mysql
+    ports:
+      - "13306:3306"
+    restart: always
+  startup-sql-runner:
+    image: mysql:8.0.34
+    container_name: startup-sql-runner
+    depends_on:
+      - mysql
+    restart: "no"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    command: [ "bash", "-c", "sleep 10 && mysql -h mysql -uroot -p4iKqWz0dasVpC0z4EQUK < /docker-entrypoint-initdb.d/init.sql" ]
+volumes:
+  main-mysql-data:

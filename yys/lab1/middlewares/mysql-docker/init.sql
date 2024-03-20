@@ -1,0 +1,12 @@
+create database if not exists `ase_user_service_prod`;
+create database if not exists `ase_user_service_test`;
+create database if not exists `ase_user_service_dev`;
+create database if not exists `ase_notification_service_prod`;
+create database if not exists `ase_notification_service_test`;
+create database if not exists `ase_notification_service_dev`;
+create database if not exists `ase_conference_service_prod`;
+create database if not exists `ase_conference_service_test`;
+create database if not exists `ase_conference_service_dev`;
+create database if not exists `ase_contribute_service_prod`;
+create database if not exists `ase_contribute_service_test`;
+create database if not exists `ase_contribute_service_dev`;

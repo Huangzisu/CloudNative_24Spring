@@ -1,0 +1,34 @@
+server:
+  port: 8082
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${MYSQL_HOST:127.0.0.1}:${MYSQL_PORT:13306}/ase_contribute_service_dev
+    username: root
+    password: 4iKqWz0dasVpC0z4EQUK
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQLDialect
+    show-sql: true
+  cloud:
+    nacos:
+      discovery:
+        username: nacos
+        password: nacos
+        server-addr: ${NACOS_HOST:127.0.0.1}:${NACOS_PORT:8848}
+  application:
+    name: ase-contribute-service
+dubbo:
+  application:
+    name: ase-contribute-service-dubbo
+    qos-port: 22225
+    serialize-check-status: WARN
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    address: nacos://${NACOS_HOST:127.0.0.1}:${NACOS_PORT:8848}
+    username: nacos
+    password: nacos
+
