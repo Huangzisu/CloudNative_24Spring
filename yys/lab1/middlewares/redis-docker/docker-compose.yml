@@ -1,0 +1,14 @@
+version: '3'
+services:
+  redis:
+    image: redis:6.2
+    container_name: my-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data  # 将 Redis 数据目录挂载到名为 "redis-data" 的数据卷
+      - ./redis.conf:/usr/local/etc/redis/redis.conf  # 将自定义的配置文件挂载到容器中
+    command: redis-server /usr/local/etc/redis/redis.conf  # 指定配置文件
+    restart: always
+volumes:
+  redis-data:  # 定义名为 "redis-data" 的数据卷
