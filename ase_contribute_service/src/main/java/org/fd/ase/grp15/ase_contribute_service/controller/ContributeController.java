@@ -29,6 +29,7 @@ public class ContributeController {
     @GetMapping("/contribute/listByConference/{conferenceName}")
     public ResponseWithData<List<ListContribution>> conferenceContribute(@PathVariable("conferenceName") String name){
         return new ResponseWithData(service.listContributionsByConferenceName(name), "");
+
     }
 
     @GetMapping("/contribute/detail/{contributeId}")
