@@ -2,10 +2,8 @@ package org.fd.ase.grp15.ase_contribute_service.entity.vo;
 
 import lombok.Getter;
 import lombok.Setter;
-<<<<<<< HEAD
 import org.fd.ase.grp15.ase_contribute_service.entity.Contribution;
-=======
->>>>>>> origin/master
+
 
 import java.io.Serializable;
 
@@ -29,7 +27,6 @@ public class ListContribution implements Serializable {
         this.status = status;
     }
 
-<<<<<<< HEAD
     public ListContribution(Contribution contribution) {
         this.id = contribution.getId();
         this.conferenceName = contribution.getConferenceName();
@@ -37,7 +34,4 @@ public class ListContribution implements Serializable {
         this.title  = contribution.getTitle();
         this.status = contribution.getStatus();
     }
-
-=======
->>>>>>> origin/master
 }

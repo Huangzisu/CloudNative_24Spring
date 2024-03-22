@@ -5,20 +5,16 @@ import org.fd.ase.grp15.ase_contribute_service.entity.Contribution;
 import org.fd.ase.grp15.ase_contribute_service.entity.vo.ListContribution;
 import org.fd.ase.grp15.ase_contribute_service.repository.ContributeRepository;
 import org.fd.ase.grp15.ase_contribute_service.request.ContributeRequest;
-<<<<<<< HEAD
-=======
+
 import org.fd.ase.grp15.common.enums.ConferenceRole;
->>>>>>> origin/master
 import org.fd.ase.grp15.common.iservice.IConferenceService;
 import org.fd.ase.grp15.common.iservice.IUserConferenceRoleService;
 import org.fd.ase.grp15.common.iservice.conference.dto.ConferenceDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-<<<<<<< HEAD
-=======
+
 import java.time.LocalDateTime;
->>>>>>> origin/master
 import java.util.ArrayList;
 import java.util.List;
 import java.text.SimpleDateFormat;
